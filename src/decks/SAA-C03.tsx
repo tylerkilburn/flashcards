@@ -1,5 +1,4 @@
 import { IFlashCard } from "../types"
-import { ReactNode } from "react"
 
 const CLOUDWATCH: IFlashCard[] = [
   {
@@ -31,7 +30,7 @@ const CLOUDWATCH: IFlashCard[] = [
   },
   {
     question: "What is a Namespace in Cloudwatch?",
-    answer: "A container for monitoring data.",
+    answer: <>A container for monitoring data.</>,
   },
   {
     question: "What is a Metric in Cloudwatch?",
@@ -61,8 +60,12 @@ const CLOUDWATCH: IFlashCard[] = [
   },
   {
     question: "What is a Dimension in Cloudwatch?",
-    answer:
-      "Name/Value pairs that allow cloudwatch to separate things or provide perspectives.",
+    answer: (
+      <>
+        Name/Value pairs that allow cloudwatch to separate things or provide
+        perspectives.
+      </>
+    ),
   },
   {
     question: "What is an Alarm in Cloudwatch?",
@@ -85,6 +88,91 @@ const CLOUDWATCH: IFlashCard[] = [
   },
 ]
 
-const deck: IFlashCard[] = [...CLOUDWATCH]
+const IAM: IFlashCard[] = [
+  {
+    question: "What is an IAM policy?",
+    answer: (
+      <>
+        A set of security statements to AWS", Grants access and/or Denies access
+        to AWS products and features to an identity.
+      </>
+    ),
+  },
+  {
+    question: "What is a n IAM policy document?",
+    answer: <>--FILL--1</>,
+  },
+  {
+    question: "What is a SID?",
+    answer: <>Statement ID</>,
+  },
+  {
+    question: "What is the priority order of permission grants?",
+    answer: (
+      <>
+        <ol>
+          <li>Explicit Deny</li>
+          <li>Explicit Grant</li>
+          <li>Deny by default</li>
+          <li>...Deny, allow, deny</li>
+          <li>Root account has access to all</li>
+        </ol>
+        <ul>
+          <li>...Deny, allow, deny</li>
+          <li>Root account has access to all</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is a managed policy?",
+    answer: <>--FILL--1</>,
+  },
+  {
+    question: "What are IAM Users?",
+    answer: (
+      <>
+        IAM Users are an identity used for anything requiring long-term AWS
+        <ul>
+          <li>Humans</li>
+          <li>Applications</li>
+          <li>Service Accounts</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is a Principle in the Context of IAM?",
+    answer: (
+      <>
+        An entity trying to access an AWS account.
+        <ul>
+          <li>People</li>
+          <li>Computers</li>
+          <li>Services</li>
+        </ul>
+        Starts un-authed, must prove claim to becomes authed.
+      </>
+    ),
+  },
+  {
+    question: "What is the difference between authentication and authorization?",
+    answer: <>--FILL--2.5.0</>,
+  },
+  {
+    question: "What is an ARN",
+    answer: <>An AWS unique identifier for AWS resources.</>,
+  },
+  {
+    question: "What is the IAM User Limit",
+    answer: <>5,000</>,
+  },
+  {
+    question: "How many groups can an IAM user belong to?",
+    answer: <>10</>,
+  },
+]
+
+const deck: IFlashCard[] = [...CLOUDWATCH, ...IAM]
 
 export default deck
