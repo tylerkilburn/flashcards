@@ -242,16 +242,78 @@ const IAM: IFlashCard[] = [
               </li>
             </ul>
           </li>
-          <li>The permissions policy</li>
-          <ul>
-            <li>What the Role is allowed to do.</li>
-          </ul>
+          <li>
+            The permissions policy
+            <ul>
+              <li>What the Role is allowed to do.</li>
+            </ul>
+          </li>
         </ul>
       </>
     ),
+  },
+  {
+    question: "When to use access roles?",
+    answer: (
+      <>
+        <ul>
+          <li>
+            Apply to a Service
+            <ul>
+              <li>Lambda</li>
+            </ul>
+          </li>
+          <li>
+            Emergency
+            <ul>
+              <li>Break glass situation</li>
+            </ul>
+          </li>
+          <li>
+            Adding AWS into an existing corporate environment
+            <ul>
+              <li>Existing identities (active directory)</li>
+            </ul>
+          </li>
+          <li>
+            App with 100,000 of users
+            <ul>
+              <li>see... Identity Federation</li>
+            </ul>
+          </li>
+          <li>Cross account access</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What are service Linked Roles",
+    answer: (
+      <>
+        Role linked to a specific AWS service
+        <ul>
+          <li>Predefined by service</li>
+          <li>Can't delete service linked role</li>
+          <li>Best practice is to use Role separation</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What are pass roles?",
+    answer: <>8.3.0</>,
+  },
+  {
+    question: "",
+    answer: <></>,
   },
 ]
 
 const deck: IFlashCard[] = [...GENERAL, ...CLOUDWATCH, ...IAM]
 
 export default deck
+
+const Q = {
+  question: "",
+  answer: <></>,
+}
