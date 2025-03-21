@@ -2,7 +2,7 @@ import { IFlashCard } from "../types"
 
 const GENERAL: IFlashCard[] = [
   {
-    question: "What is High Availability",
+    question: "What is High Availability?",
     answer: (
       <>
         Aims to <strong>ensure</strong> an agreed level of operational{" "}
@@ -17,6 +17,138 @@ const GENERAL: IFlashCard[] = [
         </ul>
       </>
     ),
+  },
+  {
+    question: "What is Fault Tolerance?",
+    answer: (
+      <>
+        The property that enables a system to continue operating properly in the
+        event of the failure (one or more faults within) of its components.
+        <ul>
+          <li>Work through failure without disruption</li>
+          <li>Operate through failure</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is Disaster Recovery?",
+    answer: (
+      <>
+        A set of policies, tools and procedures to enabler the recovery or
+        continuation of vital technology infrastructure and systems following a
+        natural or human-induced disaster.
+        <ul>
+          <li>What to do when disaster occurs</li>
+          <ul>
+            Considerations
+            <li>Pre-planning</li>
+            <li>Recovery</li>
+            <li>DR Plans</li>
+            <li>DR Testing</li>
+          </ul>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is Route 53?",
+    answer: (
+      <>
+        AWS's managed DNS Product
+        <ul>
+          <li>Global Service, single Database</li>
+          <li>Globally Resilient</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What services does Route 53 provide?",
+    answer: (
+      <>
+        <ul>
+          <li>Register Domains</li>
+          <li>Host Zone files</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What are Hosted Zones?",
+    answer: (
+      <>
+        <ul>
+          <li>Zone Files in AWS</li>
+          <li>Hosted on four managed name servers</li>
+          <li>Can be public</li>
+          <li>or private... linked to VPC(s)</li>
+          <li>...stores records (record sets)</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What DNS Record Types Exist?",
+    answer: (
+      <>
+        <ul>
+          <li>NS Records</li>
+          <li>NS Records</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is the NS DNS Record Type?",
+    answer: <>Allow delegation to occur in DNS</>,
+  },
+  {
+    question: "What is the A DNS Record Type?",
+    answer: <>Map Hostnames to IP addresses, IPV4</>,
+  },
+  {
+    question: "What is the AAAA DNS Record Type?",
+    answer: <>Map Hostnames to IP addresses, IPV6</>,
+  },
+  {
+    question: "What is the CNAME DNS Record Type?",
+    answer: (
+      <>
+        Allows you to create the equivalent of DNS shortcuts.
+        <ul>
+          <li>Host to Host records</li>
+          <li>aka Canonical name</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is the MX DNS Record Type?",
+    answer: (
+      <>
+        Is how a server can find the mail server for a specific domain.
+        <ul>
+          <li>Priority</li>
+          <li>Value</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is the TXT DNS Record Type?",
+    answer: (
+      <>
+        Allow you to add arbitrary text to a domain.
+        <ul>
+          <li>Common use case is proving domain ownership</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "DNS TTL value?",
+    answer: <>Time to live. It is a value in seconds.</>,
   },
 ]
 
@@ -304,12 +436,119 @@ const IAM: IFlashCard[] = [
     answer: <>8.3.0</>,
   },
   {
+    question: "AWS Organizations",
+    answer: (
+      <>
+        Is product to manage multiple AWS accounts in a cost effective way and
+        minimal overhead
+      </>
+    ),
+  },
+  {
+    question: "What is a Management (Master) Account",
+    answer: (
+      <>
+        __FILL__
+        <ul>
+          <li>aka Master Account</li>
+          <li>aka Payer Account</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What is a Management (Master) Account",
+    answer: <>__FILL__</>,
+  },
+  {
+    question: "What are Service Control Policies?",
+    answer: (
+      <>
+        Used to restrict AWS accounts
+        <ul>
+          <li>Policy Documents</li>
+          <li>Inherit down the organization tree</li>
+          <li>They dont grant permissions, they are boundaries</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "What does AWS Control Tower do?",
+    answer: (
+      <>
+        Orchestrates other AWS services to pro
+        <ul>
+          <li>SSO/ID Federation, Centralized Logging and Auditing</li>
+          <li></li>
+        </ul>
+      </>
+    ),
+  },
+  {
     question: "",
     answer: <></>,
   },
 ]
 
-const deck: IFlashCard[] = [...GENERAL, ...CLOUDWATCH, ...IAM]
+const S3: IFlashCard[] = [
+  {
+    question: "What are Bucket Polices",
+    answer: (
+      <ul>
+        <li>A type of AWS resource policy</li>
+        <li>The policy is attached to the bucket.</li>
+        <li>"Who can access"</li>
+        <li>Can control security(Allow/Deny) in same or different accounts</li>
+        <li>Can allow or deny Anonymous principals</li>
+      </ul>
+    ),
+  },
+  {
+    question: "What are S3 permissions by default?",
+    answer: (
+      <>
+        They are private by default. Only the account root user can access by
+        default. All other permissions to AWS identities need to be granted.
+      </>
+    ),
+  },
+  {
+    question: "",
+    answer: <></>,
+  },
+]
+
+const S3_SECURITY_MISC: IFlashCard[] = [
+  {
+    question: "Best Policy type for controlling different resources?",
+    answer: <>Identity Policy</>,
+  },
+  {
+    question: "Best Policy type when you have a preference for IAM?",
+    answer: <>Identity Policy</>,
+  },
+  {
+    question: "Best Policy type for controlling same account access?",
+    answer: <>Identity Policy</>,
+  },
+  {
+    question: "Best Policy type for just controlling S3?",
+    answer: <>Bucket Policy</>,
+  },
+  {
+    question: "Best Policy type for anonymous or cross-account access?",
+    answer: <>Bucket Policy</>,
+  },
+]
+
+const deck: IFlashCard[] = [
+  ...GENERAL,
+  ...CLOUDWATCH,
+  ...IAM,
+  ...S3,
+  ...S3_SECURITY_MISC,
+]
 
 export default deck
 
