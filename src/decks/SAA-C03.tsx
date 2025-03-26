@@ -1,6 +1,7 @@
-import { IFlashCard } from "../types"
+import { IFlashCard, IFlashCardNoId } from "../types"
+import { hashCardToId } from "../utils/hashCardToId"
 
-const GENERAL: IFlashCard[] = [
+const GENERAL: IFlashCardNoId[] = [
   {
     question: "What is High Availability?",
     answer: (
@@ -152,7 +153,7 @@ const GENERAL: IFlashCard[] = [
   },
 ]
 
-const CLOUDWATCH: IFlashCard[] = [
+const CLOUDWATCH: IFlashCardNoId[] = [
   {
     question: "What three main things does Cloudwatch Do?",
     answer: (
@@ -240,7 +241,7 @@ const CLOUDWATCH: IFlashCard[] = [
   },
 ]
 
-const KMS: IFlashCard[] = [
+const KMS: IFlashCardNoId[] = [
   {
     question: "What is KMS?",
     answer: (
@@ -294,7 +295,7 @@ const KMS: IFlashCard[] = [
   },
 ]
 
-const IAM: IFlashCard[] = [
+const IAM: IFlashCardNoId[] = [
   {
     question: "What is an IAM policy?",
     answer: (
@@ -545,7 +546,7 @@ const IAM: IFlashCard[] = [
   },
 ]
 
-const S3: IFlashCard[] = [
+const S3: IFlashCardNoId[] = [
   {
     question: "What are Bucket Polices",
     answer: (
@@ -812,7 +813,7 @@ const S3: IFlashCard[] = [
   },
 ]
 
-const S3_SECURITY: IFlashCard[] = [
+const S3_SECURITY: IFlashCardNoId[] = [
   {
     question: "Best Policy type for controlling different resources?",
     answer: <>Identity Policy</>,
@@ -885,16 +886,16 @@ const S3_SECURITY: IFlashCard[] = [
   },
 ]
 
-const deck: IFlashCard[] = [
+export const deck_SAA_CO3: IFlashCard[] = [
   ...GENERAL,
   ...CLOUDWATCH,
   ...IAM,
   ...KMS,
   ...S3,
   ...S3_SECURITY,
-]
+].map((card) => ({ id: hashCardToId(card), ...card }))
 
-export default deck
+export default deck_SAA_CO3
 
 const Q = {
   question: "",

@@ -1,16 +1,6 @@
 import Head from "next/head"
-import { Geist, Geist_Mono } from "next/font/google"
-import styles from "@styles/landing.module.scss"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+import { deck_SAA_CO3 } from "../decks/saa-c03"
 
 export default function Home() {
   return (
@@ -22,9 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div
-        className={`${styles.root} ${geistSans.variable} ${geistMono.variable}`}
+        className={``}
       >
-        <main></main>
+        <main>
+          {deck_SAA_CO3[0].question.toString()}
+          {JSON.stringify(deck_SAA_CO3[0].answer)}
+          </main>
       </div>
     </>
   )
