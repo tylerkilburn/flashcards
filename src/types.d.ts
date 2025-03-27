@@ -1,4 +1,9 @@
-export type ValueOf<T> = T[keyof T]
+import { Flashcard } from "react-quizlet-flashcard"
+import FlashcardProps from "react-quizlet-flashcard/dist/interfaces/IFlashcard"
+
+export interface QuizletCard extends FlashcardProps {
+  id: string
+}
 
 interface IFlashCard {
   id: string

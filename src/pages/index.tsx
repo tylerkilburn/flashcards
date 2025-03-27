@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import { deck_SAA_CO3 } from "../decks/saa-c03"
+import { FlashDeck } from "../components/flashDeck/flashDeck"
 
 export default function Home() {
   return (
@@ -11,13 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <div
-        className={``}
-      >
+      <div className={``}>
         <main>
-          {deck_SAA_CO3[0].question.toString()}
-          {JSON.stringify(deck_SAA_CO3[0].answer)}
-          </main>
+          <FlashDeck deck={deck_SAA_CO3} />
+        </main>
       </div>
     </>
   )

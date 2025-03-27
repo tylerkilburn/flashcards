@@ -424,9 +424,6 @@ const IAM: IFlashCardNoId[] = [
             The trust policy
             <ul>
               <li>Which identities can assume that Role.</li>
-              <li>
-                <strong></strong>:
-              </li>
             </ul>
           </li>
           <li>
@@ -539,10 +536,6 @@ const IAM: IFlashCardNoId[] = [
         </ul>
       </>
     ),
-  },
-  {
-    question: "",
-    answer: <></>,
   },
 ]
 
@@ -810,6 +803,14 @@ const S3: IFlashCardNoId[] = [
         <li>CRR - Latency Reduction</li>
       </ul>
     ),
+  },
+  {
+    question: "What permissions does an S3 Presigned URL have?",
+    answer: <>The permissions of the identity that generated it ATM</>,
+  },
+  {
+    question: "What is wrong with using a role for S3 Presigned URLs?",
+    answer: <>URL stops working when temporary credentials expire</>,
   },
 ]
 
