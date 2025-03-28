@@ -47,3 +47,8 @@ ul ul ul {
 li + li {
   margin-top: 8px;
 }
+
+/* Lib Overrides */
+.FlashcardArrayWrapper__CardHolder.FlashcardArrayWrapper__CardHolder {
+  height: 100vh;
+}
