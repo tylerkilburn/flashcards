@@ -675,7 +675,7 @@ const S3: IFlashCardNoId[] = [
     question: "What is S3 Glacier - Flexible?",
     answer: (
       <ul>
-        <li>S3 Standard Allows for instant access, but expensive to access</li>
+        <li>Allows for instant access, but expensive to access</li>
         <li>Same durability as Standard S3</li>
         <li>Data treated as cold objects, not immediately available</li>
         <li>Need to initiate a retrieval process to access</li>

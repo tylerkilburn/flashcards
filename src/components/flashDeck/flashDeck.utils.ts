@@ -7,9 +7,9 @@ import { shuffleArray } from "@utils/shuffleArray"
 
 type VoidCallback = () => void
 
-type FlipRef = RefObject<VoidCallback>
+export type FlipRef = RefObject<VoidCallback>
 
-type ControlRef = RefObject<{
+export type ControlRef = RefObject<{
   nextCard: () => void
   prevCard: () => void
   resetArray: () => void

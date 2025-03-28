@@ -5,10 +5,10 @@ export const FLASHCARD_ARRAY_STYLE: CSSProperties = {
 }
 
 export const FLASHCARD_STYLE: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
   alignItems: "center",
   cursor: "pointer",
+  display: "flex",
+  justifyContent: "center",
   padding: 16,
 }
 
