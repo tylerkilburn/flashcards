@@ -8,8 +8,9 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "Flashcards",
     description: "Flashcards",
     start_url: "/",
+
     display:
-      "standalone" /* Could be "fullscreen", "standalone", "minimal-ui", or "browser" */,
+      "fullscreen" /* Could be "fullscreen", "standalone", "minimal-ui", or "browser" */,
     orientation: "landscape" /* Could be "landscape" or "portrait" */,
 
     background_color: "#fff",
