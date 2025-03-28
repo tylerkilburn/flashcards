@@ -5,7 +5,8 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100dvw;
+  max-height: 100dvh;
   overflow-x: hidden;
   overflow-y: hidden;
   margin: 0;
@@ -53,5 +54,5 @@ li + li {
 
 /* Lib Overrides */
 .FlashcardArrayWrapper__CardHolder.FlashcardArrayWrapper__CardHolder {
-  height: 100vh;
+  height: 100dvh;
 }
