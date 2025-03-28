@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     display:
       "standalone" /* Could be "fullscreen", "standalone", "minimal-ui", or "browser" */,
     orientation: "landscape" /* Could be "landscape" or "portrait" */,
-    
+
     background_color: "#fff",
     theme_color: "#fff",
     icons: [
@@ -20,7 +20,4 @@ export default function manifest(): MetadataRoute.Manifest {
       },
     ],
   }
-}
-
-{
 }
